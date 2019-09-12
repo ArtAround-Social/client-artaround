@@ -1,0 +1,16 @@
+
+
+.section {
+  overflow: hidden;
+  background-color: rgba(16, 59, 202, 0.733);
+  color: white;
+}
+
+.headerleft {
+  float: left;
+  padding: 5px;
+}
+
+.headerright {
+  float: right
+}

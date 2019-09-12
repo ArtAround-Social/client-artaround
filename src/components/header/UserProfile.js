@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import userImage from './user.png';
+import userImage from './user2.jpg';
 
-function UserProfile({ name }) {
+
+function UserProfile() {
+  const name = 'Vasily Markov';
   return(
     <>
-      <h4>{name}</h4>
-      <img src={userImage} alt='user png'/>
+      {name}
+      <img src={userImage} alt='user png' height='40'/>
     </>
   );
 }

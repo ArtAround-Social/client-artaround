@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function AccountType({ user_type }) {
+function AccountType() {
+  const user_type = 'Artist';
   return(
     <h3>{user_type} Account</h3>
   );
