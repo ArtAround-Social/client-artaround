@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Logout.css';
 
 function Logout({ handleLogout }) {
   return(
-    <button className={styles.button} onClick={handleLogout}>Logout</button>
+    <button onClick={handleLogout}>Logout</button>
   );
 }
 
