@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InviteList component renders invites list 1`] = `
+<ul>
+  <li
+    key="1234"
+  >
+    <Invite
+      invintation={
+        Object {
+          "id": 1234,
+          "name": "art gallery",
+        }
+      }
+    />
+  </li>
+  <li
+    key="4321"
+  >
+    <Invite
+      invintation={
+        Object {
+          "id": 4321,
+          "name": "markovco gallery",
+        }
+      }
+    />
+  </li>
+</ul>
+`;
