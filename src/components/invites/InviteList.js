@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import InviteItem from './InviteItem';
 
 function InviteList({ invites }) {
-  const inviteElement = invites.map(invintation => (
-    <li key={invintation.id}>
-      <InviteItem invintation={invintation} />
+  const inviteElement = invites.map(invitation => (
+    <li key={invitation.id}>
+      <InviteItem invitation={invitation} />
     </li>
   ));
 
