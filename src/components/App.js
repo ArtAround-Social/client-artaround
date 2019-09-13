@@ -1,5 +1,8 @@
 import React from 'react';
+import FileUpload from './file-upload/FileUpload';
 
 export default function App() {
-  return<h1>Hello World</h1>;
+  return(
+    <FileUpload />
+  );
 }
