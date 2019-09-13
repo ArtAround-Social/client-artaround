@@ -1,11 +1,13 @@
 import React, { useCallback } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
+import postImage from '../../services/fileApi';
 
 function FileUpload(){
   const onDrop = useCallback(
     ([file]) => {
       console.log(file);
+      postImage(file);
     }
   );
 
@@ -22,8 +24,8 @@ function FileUpload(){
   );
 }
 
-FileUpload.propTypes = {
-  onDrop: PropTypes.func.isRequired,
-};
+// FileUpload.propTypes = {
+//   onDrop: PropTypes.func.isRequired,
+// };
 
 export default FileUpload;
