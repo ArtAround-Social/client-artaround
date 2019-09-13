@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import userImage from './user2.jpg';
 
 
-function UserProfile() {
-  const name = 'Vasily Markov';
+function UserProfile({ name }) {
   return(
     <>
       {name}
