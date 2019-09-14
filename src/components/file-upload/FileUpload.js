@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 // import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
-import postImage from '../../services/fileApi';
+import { postImage } from '../../services/fileApi';
 
 function FileUpload(){
   const onDrop = useCallback(
