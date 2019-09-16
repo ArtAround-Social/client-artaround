@@ -1,20 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter as Switch, Route, Link } from 'react-router-dom';
-import ArtistFormContainer from '../../containers/ArtistFormContainer';
-import GalleryFormContainer from '../../containers/GalleryFormContainer';
+import { Link } from 'react-router-dom';
 
 function LandingPage({ handleSignin, email, password }) {
   return(
     <>
       <h3>CREATE ACCOUNT:</h3>
-      <Switch>
-        <Link to='/artistform'>Artist Account</Link><br/>
-        <Link to='/galleryform'>Gallery Account</Link>
-
-        <Route path='/artistform' component={ArtistFormContainer}/>
-        <Route path='/galleryform' component={GalleryFormContainer}/>
-      </Switch>
+      
+        <Link to='/artistform'>Artist Account </Link>
+        <Link to='/galleryform'> Gallery Account</Link>
+      
 
       <h3>ALREADY HAVE AN ACOUNT:</h3>
       <form onSubmit={handleSignin}>
