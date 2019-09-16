@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserProfile component renders name 1`] = `
+<Fragment>
+  Vasily Markov
+  <img
+    alt="user png"
+    height="40"
+    src="/path/image"
+  />
+</Fragment>
+`;

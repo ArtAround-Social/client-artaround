@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccountType component renders account type 1`] = `
+<h3>
+  Artist
+   Account
+</h3>
+`;
