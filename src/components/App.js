@@ -4,7 +4,7 @@ import LandingPageContainer from '../containers/LandingPageContainer';
 export default function App() {
   return(
   <>
-    <LandingPageContainer />
+    <LandingPageContainer/>    
   </>
   );
 }

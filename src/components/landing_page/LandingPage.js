@@ -1,30 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import ArtistFormContainer from '../../containers/ArtistFormContainer';
 
-function LandingPage({ allImages }) {
-  
-  const imagesElement = allImages.map(image => (
-    <div key={image.id}>
-      <img src={image.url}/>
-    </div>
-  ));
-
+function LandingPage({ handleSignin, email, password }) {
   return(
     <>
-      <div>
-        <a href=''>Create Account</a>
-        <a href=''>Sign In</a>
-      </div>
-      <div>{imagesElement}</div>
+        <h3>CREATE ACCOUNT:</h3>
+      <Router>
+        <Link to='/artistform'>Artist Account</Link><br/>
+        <Link to='/galleryform'>Gallery Account</Link>
+
+        <Route path='/artistform' component={ArtistFormContainer}></Route>
+        <Route path='/galleryform' component=''></Route>
+      </Router>
+
+        <h3>ALREADY HAVE AN ACOUNT:</h3>
+      <form onSubmit={handleSignin}>
+        <input value={email} placeholder='email'/><br/>
+        <input value={password} placeholder='password'/><br/>
+        <button>Login</button>
+      </form>
     </>
   );
 }
 
 LandingPage.propTypes = {
-  allImages: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string,
-    url: PropTypes.string.isRequired
-  }))
+  handleSignin: PropTypes.func.isRequired,
+  email: PropTypes.string,
+  password: PropTypes.string
 };
 
 export default LandingPage;
