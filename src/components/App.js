@@ -1,10 +1,12 @@
 import React from 'react';
-import LandingPageContainer from '../containers/LandingPageContainer';
+import ArtistFormContainer from '../containers/ArtistFormContainer';
+import GalleryFormContainer from '../containers/GalleryFormContainer';
 
 export default function App() {
   return(
   <>
-    <LandingPageContainer />
+    <ArtistFormContainer/>
+    <GalleryFormContainer/>
   </>
   );
 }
