@@ -2,12 +2,13 @@ import React, { useCallback } from 'react';
 // import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
 import { postImage } from '../../services/fileApi';
+const artist = '5d7bfa5d0ae46c485efe113d';
 
 function FileUpload(){
   const onDrop = useCallback(
     ([file]) => {
       console.log(file);
-      postImage(file);
+      postImage(file, artist);
     }
   );
 

@@ -1,6 +1,4 @@
-const artist = '5d7bfa5d0ae46c485efe113d';
-
-export const postImage = (file) => {
+export const postImage = (file, artist) => {
   const data = new FormData();
   data.append('photo', file);
   data.append('artistId', artist);
