@@ -1,0 +1,94 @@
+COMPONENT
+ // const imagesElement = allImages.map(image => (
+  //   <div key={image.id}>
+  //     <img src={image.url}/>
+  //   </div>
+  // ));
+
+  {/* <div>{imagesElement}</div> */}
+
+   // allImages: PropTypes.arrayOf(PropTypes.shape({
+  //   id: PropTypes.string,
+  //   url: PropTypes.string.isRequired
+  // }))
+
+
+
+  CONTAINER
+  import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import LandingPage from '../components/landing_page/LandingPage';
+import { fetchImages } from '../actions/landingPageAction';
+import { getImages, getImagesLoading } from '../selectors/allSelectors';
+
+class AllImages extends Component {
+  static propTypes = {
+    fetch: PropTypes.func.isRequired,
+    allImages: PropTypes.array.isRequired,
+    loading: PropTypes.bool.isRequired
+  }
+
+  componentDidMount() {
+    this.props.fetch(); 
+  }
+  
+  
+  render() {
+    const { allImages, loading } = this.props;
+    if(loading || !allImages) return<h1>Loading</h1>;
+
+    return<LandingPage allImages={allImages} />;
+  }
+}
+
+const mapStateToProps = state => ({
+  allImages: getImages(state),
+  loading: getImagesLoading(state)
+});
+
+
+
+const mapDispatchProps = dispatch => ({
+  fetch() {
+    dispatch(fetchImages());
+  }
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchProps
+)(AllImages);
+
+
+
+REDUCER
+import { FETCH_IMAGES, FETCH_IMAGES_LOADING } from '../actions/landingPageAction';
+
+const initialState = {
+  allImages: [],
+  loading: false,
+  error:null
+};
+
+export default function reducer(state = initialState, action) {
+  switch(action.type) {
+    case FETCH_IMAGES_LOADING:
+      return{ ...state, loading: true };
+    case FETCH_IMAGES:  
+      return{ ...state, allImages: action.payload, loading: false };  
+    default:
+      return state;
+  }
+}
+
+// import { getAllImages } from '../services/allImagesCall';
+
+// export const FETCH_IMAGES = 'FETCH_IMAGES';
+// export const FETCH_IMAGES_LOADING = 'FETCH_IMAGES_LOADING';
+
+// export const fetchImages = () => ({
+//   type: FETCH_IMAGES,
+//   payload: getAllImages(),
+//   pendingType: FETCH_IMAGES_LOADING 
+// });
