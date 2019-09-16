@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import artist from './artistFormReducer';
-import landingPage from './landingPageReducer';
+import gallery from './galleryFormReducer';
 import user from './signinReducer';
 
 export default combineReducers({
   artist,
-  landingPage,
+  gallery,
   user
 });

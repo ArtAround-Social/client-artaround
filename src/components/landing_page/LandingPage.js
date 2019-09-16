@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import ArtistFormContainer from '../../containers/ArtistFormContainer';
+import GalleryFormContainer from '../../containers/GalleryFormContainer';
 
 function LandingPage({ handleSignin, email, password }) {
   return(
@@ -12,7 +13,7 @@ function LandingPage({ handleSignin, email, password }) {
         <Link to='/galleryform'>Gallery Account</Link>
 
         <Route path='/artistform' component={ArtistFormContainer}></Route>
-        <Route path='/galleryform' component=''></Route>
+        <Route path='/galleryform' component={GalleryFormContainer}></Route>
       </Router>
 
         <h3>ALREADY HAVE AN ACOUNT:</h3>
