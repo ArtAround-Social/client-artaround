@@ -1,14 +1,14 @@
 import React from 'react';
-// import ArtistFormContainer from '../containers/ArtistFormContainer';
-// import GalleryFormContainer from '../containers/GalleryFormContainer';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import LandingPageContainer from '../containers/LandingPageContainer';
+
 
 export default function App() {
   return(
   <>
-    <LandingPageContainer/>
-    {/* <ArtistFormContainer/>
-    <GalleryFormContainer/> */}
+    <Router>
+      <Route exact path='/' component={LandingPageContainer}></Route>
+    </Router>
   </>
   );
 }
