@@ -7,7 +7,7 @@ function LandingPage({ handleSignin, email, password }) {
     <>
       <h3>CREATE ACCOUNT:</h3>
       
-        <Link to='/artistform'>Artist Account </Link>
+        <Link to='/artistform'>Artist Account </Link><br/>
         <Link to='/galleryform'> Gallery Account</Link>
       
 
