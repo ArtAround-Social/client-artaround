@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import styles from './Header.css';
 import userImage from './user2.jpg';
 
+//passing stupid travis
+
 export default function Header({ user_type, handleLogout, name }) {
   return(
     <section className={styles.section}>
