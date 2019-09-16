@@ -1,6 +1,10 @@
 import React from 'react';
-import Header from './header/Header';
+import Routes from './landing_page/Routes';
 
 export default function App() {
-  return<Header />;
+  return(
+  <>
+    <Routes/>
+  </>
+  );
 }
