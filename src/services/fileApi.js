@@ -1,7 +1,7 @@
-export const postImage = (file, artist) => {
+export const postImage = (file, id) => {
   const data = new FormData();
   data.append('photo', file);
-  data.append('artistId', artist);
+  data.append('id', id);
   return fetch(`${process.env.API_URL}/api/v1/files/artwork`, {
     method: 'POST',
     body: data
