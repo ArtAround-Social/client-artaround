@@ -1,13 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import AccountType from '../header/AccountType';
+import Header from '../header/Header';
 
-
-describe('AccountType component', () => {
-  it('renders account type', () => {
+describe('Header component', () => {
+  it('renders header', () => {
     const wrapper = shallow(
-      <AccountType
+      <Header
         user_type = 'Artist'
+        handleLogout = {() => { }}
+        name = 'vasily'
       />
     );
     expect(wrapper).toMatchSnapshot();

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders header 1`] = `
+<section
+  className="section"
+>
+  <h3>
+    Artist
+     Account
+  </h3>
+  <button
+    className="button"
+    onClick={[Function]}
+  >
+    Logout
+  </button>
+  vasily
+  <img
+    alt="user png"
+    height="40"
+    src="/path/image"
+  />
+</section>
+`;
