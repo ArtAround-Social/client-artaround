@@ -1,8 +1,12 @@
 import React from 'react';
-import FileUpload from './file-upload/FileUpload';
+import Routes from './landing_page/Routes';
+import HeaderContainer from '../containers/HeaderContainer';
 
 export default function App() {
   return(
-    <FileUpload />
+  <>
+    <HeaderContainer/>
+    <Routes/>
+  </>
   );
 }

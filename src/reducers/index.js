@@ -1,6 +1,11 @@
 import { combineReducers } from 'redux';
-import files from './fileReducer';
+
+import artist from './artistFormReducer';
+import gallery from './galleryFormReducer';
+import user from './signinReducer';
 
 export default combineReducers({
-  files
+  artist,
+  gallery,
+  user
 });

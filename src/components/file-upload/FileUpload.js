@@ -9,7 +9,6 @@ const id = '5d7bfa5d0ae46c485efe113d';
 function FileUpload(){
   const onDrop = useCallback(
     ([file]) => {
-      console.log(file);
       postImage(file, id);
     }
   );
