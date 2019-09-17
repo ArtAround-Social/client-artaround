@@ -14,7 +14,7 @@ PartnerItem.propTypes = {
   partner: PropTypes.shape({
     name: PropTypes.string.isRequired
   }),
-  goToPofile: PropTypes.func.isRequired
+  goToPofile: PropTypes.func
 };
 
 export default PartnerItem;
