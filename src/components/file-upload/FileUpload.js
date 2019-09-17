@@ -2,13 +2,18 @@ import React, { useCallback } from 'react';
 // import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
 import { postImage } from '../../services/fileApi';
-const artist = '5d7bfa5d0ae46c485efe113d';
+// this id is just there to make things work for now
+// replace with correct id and pass to postImage function line 13
+const id = '5d7bfa5d0ae46c485efe113d';
+// auth should give us either type artist or gallery
+// if type artist post image type should be artwork otherwise gallery
+const type = 'gallery';
+
 
 function FileUpload(){
   const onDrop = useCallback(
     ([file]) => {
-      console.log(file);
-      postImage(file, artist);
+      postImage(file, id, type);
     }
   );
 

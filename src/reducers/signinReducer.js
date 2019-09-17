@@ -1,7 +1,12 @@
 import { SIGNIN } from '../actions/landingPageAction';
 
 const initialState = {
-  user: {}
+  user: {
+    account_type: 'Artist',
+    name: 'Vasily Markov',
+    email: 'markovavasily@gamil.com',
+    password: '12343434'
+  }
 };
 
 export default function reducer(state = initialState, action) {
@@ -11,4 +16,5 @@ export default function reducer(state = initialState, action) {
     default:
       return state;
   }
+  
 }
