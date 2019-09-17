@@ -5,11 +5,15 @@ import { postImage } from '../../services/fileApi';
 // this id is just there to make things work for now
 // replace with correct id and pass to postImage function line 13
 const id = '5d7bfa5d0ae46c485efe113d';
+// auth should give us either type artist or gallery
+// if type artist post image type should be artwork otherwise gallery
+const type = 'gallery';
+
 
 function FileUpload(){
   const onDrop = useCallback(
     ([file]) => {
-      postImage(file, id);
+      postImage(file, id, type);
     }
   );
 
