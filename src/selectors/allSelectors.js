@@ -8,3 +8,5 @@ export const getAccountName = state => state.user.user.name;
 export const getImages = state => state.images.images;
 
 export const getInvites = state => state.invites.invites;
+
+export const getPartners = state => state.partners.partners;
