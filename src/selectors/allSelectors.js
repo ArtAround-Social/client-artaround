@@ -10,3 +10,5 @@ export const getImages = state => state.images.images;
 export const getInvites = state => state.invites.invites;
 
 export const getPartners = state => state.partners.partners;
+
+export const getAllArtists = state => state.allArtists.allartists;

@@ -5,6 +5,7 @@ import user from './signinReducer';
 import images from './ImageGridReducer';
 import invites from './InvitesContainer';
 import partners from './PartnersReducers';
+import allArtists from './allArtistsReducer';
 
 export default combineReducers({
   artist,
@@ -12,5 +13,6 @@ export default combineReducers({
   user,
   images,
   invites,
-  partners
+  partners,
+  allArtists
 });
