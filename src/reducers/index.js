@@ -2,17 +2,19 @@ import { combineReducers } from 'redux';
 import artist from './artistFormReducer';
 import gallery from './galleryFormReducer';
 import user from './signinReducer';
-import images from './ImageGridReducer';
+import userImages from './userImagesReducer';
 import invites from './InvitesContainer';
-import partners from './PartnersReducers';
+import userPartners from './userPartnersReducers';
 import allArtists from './allArtistsReducer';
+import profileImages from './profileImagesReducer';
 
 export default combineReducers({
   artist,
   gallery,
   user,
-  images,
+  userImages,
   invites,
-  partners,
-  allArtists
+  userPartners,
+  allArtists,
+  profileImages
 });

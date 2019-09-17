@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import PartnersList from '../components/partners/PartnersList';
-import { getPartners } from '../selectors/allSelectors';
+import { getUserPartners } from '../selectors/allSelectors';
 
 const mapStateToProps = state => ({
-  partners: getPartners(state)
+  partners: getUserPartners(state)
 });
 
 export default connect(
