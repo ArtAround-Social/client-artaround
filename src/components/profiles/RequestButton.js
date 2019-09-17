@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import stylesCss from './ProfileInfo.css';
 
 function RequestButton({ handleRequest }) {
   return(
-    <button onClick={handleRequest}>Request Partnership</button>
+    <button className={stylesCss.button} onClick={handleRequest}>Request Partnership</button>
   );
 }
 

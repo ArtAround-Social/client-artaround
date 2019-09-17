@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import stylesCss from './ProfileInfo.css';
 
 function ArtistProfileInfo({
   artistName,
@@ -20,14 +21,14 @@ function ArtistProfileInfo({
   );
 
   return(
-    <div>
+    <div className={stylesCss.info}>
       <h3>Profile Info</h3>
       <h3>{artistName}</h3>
       <h3>{artistLocation}</h3>
       <img src={poster.poster} width='200px'/>
       <h5>{styleElement}</h5>
       <h5>{mediumElement}</h5>
-      <div>
+      <div className={stylesCss.contacts}>
         <h5>{phone}</h5>
         <h5>{email}</h5>
       </div>

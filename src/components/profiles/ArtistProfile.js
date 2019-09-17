@@ -12,9 +12,9 @@ function ArtistPropfile() {
     <HeaderContainer/>
     <h2>artist</h2>
     <ArtistInfoContainers/>
+    <RequestButton/>
     <ProfileImagesContainer/>
     <ProfilePartnersContainer/>
-    <RequestButton/>
     </>
   );
 }
