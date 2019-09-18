@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuth0 } from '../../AuthProvider';
 import Header from '../header/Header';
 // import { findUser } from '../../services/userApi';
-import UserForm from '../signup_forms/UserForm';
+import UserForm from './UserForm';
 
 export default function AuthHeader() {
   const { isAuthenticated, auth0Client, user } = useAuth0();
