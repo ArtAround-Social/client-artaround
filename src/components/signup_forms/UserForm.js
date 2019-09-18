@@ -3,7 +3,7 @@ import { createUser } from '../../services/userApi';
 // import PropTypes from 'prop-types';
 
 function UserForm() {
-  const [userType, updateType] = useState('');
+  const [user_type, updateType] = useState('Artist');
   const [name, updateName] = useState('');
   const [galleryName, updateGalleryName] = useState('');
   const [location, updateLocation] = useState('');
@@ -20,20 +20,23 @@ function UserForm() {
   const handleEmailChange = ({ target }) => updateEmail(target.value);
   const handleRulesChange = ({ target }) => updateRules(target.value);
 
-  const handleSubmit = () => createUser({
-    userType,
-    name,
-    galleryName,
-    location,
-    userAuth0Id,
-    phone,
-    email,
-    rules
-  });
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    createUser({
+      user_type,
+      name,
+      galleryName,
+      location,
+      userAuth0Id,
+      phone,
+      email,
+      rules
+    });
+  };
+    
   return(
     <form onSubmit={handleSubmit}>
-      <select value={userType} onChange={handleTypeChange}>
+      <select value={user_type} onChange={handleTypeChange}>
         <option value="artist">Artist</option>
         <option value="gallery">Gallery</option>
       </select>

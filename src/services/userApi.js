@@ -2,7 +2,7 @@ const apiUrl = process.env.API_URL;
 // const herokuURL = 'https://artaround-test-app.herokuapp.com/api/v1/users';
 
 export const createUser = ({
-  userType,
+  user_type,
   name,
   galleryName,
   location,
@@ -20,7 +20,7 @@ export const createUser = ({
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      userType,
+      user_type,
       name,
       galleryName,
       location,
