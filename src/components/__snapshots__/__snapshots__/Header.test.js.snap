@@ -8,12 +8,6 @@ exports[`Header component renders header 1`] = `
     Artist
      Account
   </h3>
-  <button
-    className="button"
-    onClick={[Function]}
-  >
-    Logout
-  </button>
   vasily
   <img
     alt="user png"

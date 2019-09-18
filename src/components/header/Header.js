@@ -5,11 +5,10 @@ import userImage from './user2.jpg';
 
 //passing stupid travis
 
-export default function Header({ user_type, handleLogout, name }) {
+export default function Header({ user_type, name }) {
   return(
     <section className={styles.section}>
       <h3>{user_type} Account</h3>
-      <button className={styles.button} onClick={handleLogout}>Logout</button>
       {name}
       <img src={userImage} alt='user png' height='40'/>
     </section>
@@ -18,6 +17,5 @@ export default function Header({ user_type, handleLogout, name }) {
 
 Header.propTypes = {
   user_type: PropTypes.string,
-  handleLogout: PropTypes.func,
   name: PropTypes.string
 };
