@@ -1,11 +1,11 @@
 
 const initialState = {
   partners: [
-    { id: 1, name: 'Place1' },
-    { id: 12, name: 'Place2' },
-    { id: 153, name: 'Place3' },
-    { id: 163, name: 'Place4' },
-    { id: 173, name: 'Place5' },
+    { id: 1, name: 'name 1' },
+    { id: 12, name: 'name 2' },
+    { id: 153, name: 'name 3' },
+    { id: 163, name: 'name 4' },
+    { id: 173, name: 'name 5' },
   ]
 };
 

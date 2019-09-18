@@ -1,16 +1,16 @@
 import React from 'react';
 import HeaderContainer from '../../containers/HeaderContainer';
-import ImageGridContainer from '../../containers/ImageGridContainer';
+import UserImagesContainer from '../../containers/UserImagesContainer';
 import InvitesContainer from '../../containers/InvitesContainer';
-import PartnersContainer from '../../containers/PartnersContainer';
+import UserPartnersContainer from '../../containers/UserPartnersContainer';
 
 export default function ArtistHome() {
   return(
     <>
       <HeaderContainer />
-      <ImageGridContainer/>
+      <UserImagesContainer/>
       <InvitesContainer/>
-      <PartnersContainer/>
+      <UserPartnersContainer/>
     </>
   );
 }
