@@ -1,26 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
-import styles from './LandingPage.css';
-function LandingPage({ handleSignin, email, password }) {
+import AuthHeader from '../auth-header/AuthHeader';
+
+
+function LandingPage() {
   return(
-    <div className={styles.body}>
-      <h3 className={styles.header1}>CREATE ACCOUNT</h3>
-      <p className={styles.signup}></p>
-      <h3 className={styles.header2}>ALREADY HAVE AN ACOUNT</h3>
-      <form onSubmit={handleSignin}>
-        <input value={email} placeholder='email'/><br/>
-        <input type='password' value={password} placeholder='password'/><br/>
-        <button>Login</button>
-      </form>
-    </div>
+    <>
+    <h1>art around</h1>
+    <AuthHeader/>
+    </>
   );
+
 }
-
-LandingPage.propTypes = {
-  handleSignin: PropTypes.func.isRequired,
-  email: PropTypes.string,
-  password: PropTypes.string
-};
-
 export default LandingPage;
