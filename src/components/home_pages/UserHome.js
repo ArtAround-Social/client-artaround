@@ -1,4 +1,5 @@
 import React from 'react';
+import AuthHeader from '../auth-header/AuthHeader';
 // import HeaderContainer from '../../containers/HeaderContainer';
 // import UserImagesContainer from '../../containers/UserImagesContainer';
 // import UserPartnersContainer from '../../containers/UserPartnersContainer';
@@ -6,10 +7,11 @@ import React from 'react';
 export default function UserHome() {
   return(
     <>
-    <h2>userHome</h2>
-      {/* <HeaderContainer/> */}
-      {/* <UserImagesContainer/> */}
-      {/* <UserPartnersContainer/> */}
+      <AuthHeader />
+      <h2>userHome</h2>
+        {/* <HeaderContainer/> */}
+        {/* <UserImagesContainer/> */}
+        {/* <UserPartnersContainer/> */}
     </>
   );
 }
