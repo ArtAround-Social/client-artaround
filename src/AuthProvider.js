@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import createAuth0Client from '@auth0/auth0-spa-js';
-import { setToken } from './services/habitsApi';
+
+// import { setToken } from './services/allImagesCall';
 
 function DEFAULT_REDIRECT_CALLBACK(){
   window.history.replaceState({},
@@ -49,8 +50,8 @@ export default function Auth0Provider({
         const user = await auth0FromHook.getUser();
         setUser(user);
 
-        const claims = await auth0FromHook.getIdTokenClaims();
-        setToken(claims.__raw);
+        // const claims = await auth0FromHook.getIdTokenClaims();
+        // setToken(claims.__raw);
       }
 
       setLoading(false);
