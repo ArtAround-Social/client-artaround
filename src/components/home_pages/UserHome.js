@@ -1,15 +1,15 @@
 import React from 'react';
-// import HeaderContainer from '../../containers/HeaderContainer';
-// import UserImagesContainer from '../../containers/UserImagesContainer';
-// import UserPartnersContainer from '../../containers/UserPartnersContainer';
+import UserImagesContainer from '../../containers/UserImagesContainer';
+import UserPartnersContainer from '../../containers/UserPartnersContainer';
+import UserForm from '../auth-header/UserForm';
 
 export default function UserHome() {
   return(
     <>
     <h2>userHome</h2>
-      {/* <HeaderContainer/> */}
-      {/* <UserImagesContainer/> */}
-      {/* <UserPartnersContainer/> */}
+      <UserForm/>
+      <UserImagesContainer/>
+      <UserPartnersContainer/>
     </>
   );
 }
