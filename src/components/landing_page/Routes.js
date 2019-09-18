@@ -4,6 +4,7 @@ import ArtistFormContainer from '../../containers/GalleryFormContainer';
 import GalleryFormContainer from '../../containers/GalleryFormContainer';
 // import LandingPageContainer from '../../containers/LandingPageContainer';
 import AuthHeader from '../auth-header/AuthHeader';
+// import { withSession } from '../../AuthProvider';
 
 export default function Routes() {
   return(
