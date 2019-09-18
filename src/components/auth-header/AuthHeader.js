@@ -1,11 +1,10 @@
 import React from 'react';
 import { useAuth0 } from '../../AuthProvider';
-// import { findUser } from '../../services/userApi';
 
 export default function AuthHeader() {
   const { isAuthenticated, auth0Client } = useAuth0();
   const login = () => auth0Client.loginWithRedirect();
-  const logout = () => auth0Client.logout({ returnTo: 'http://localhost:7890' });
+  const logout = () => auth0Client.logout({ returnTo: process.env.CLIENT_URL });
 
   return(
     <>
