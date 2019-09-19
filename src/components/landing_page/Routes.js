@@ -5,13 +5,11 @@ import UserHome from '../home_pages/UserHome';
 import ArtistProfile from '../profiles/ArtistProfile';
 import GalleryProfile from '../profiles/GalleryProfile';
 import LandingPage from './LandingPage';
-import { withSession, useAuth0 } from '../../AuthProvider';
+import { withSession } from '../../AuthProvider';
 
 
 
 export default function Routes() {
-  // const { user } = useAuth0();
-  // console.log(user);
   return(
     <Switch>
       <Route path='/userhome' component={withSession(UserHome)}/>
