@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import styles from './AllArtists.css';
 
 function AnArtist({ artist }) {
   return(
-    <Link to='/artist/:id'>
-      <img src={artist.imgUrl} width='100px'/>
+    <Link className={styles.artist} to='/artist/:id'>
+      <img  src={artist.imgUrl} width='150px'/>
       <p>{artist.name}</p>
     </Link>
   );
