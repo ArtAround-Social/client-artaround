@@ -1,4 +1,5 @@
 import React from 'react';
+// import Async from 'react-async';
 import UserImagesContainer from '../../containers/UserImagesContainer';
 import UserPartnersContainer from '../../containers/UserPartnersContainer';
 import { useAuth0 } from '../../AuthProvider';
@@ -7,41 +8,15 @@ import styles from './UserHome.css';
 import FileUpload from '../file-upload/FileUpload';
 import { Link } from 'react-router-dom';
 
+// <UserForm userAuth0Id={user.sub} />
+
 export default function UserHome() {
-  const { user } = useAuth0();
-  // console.log(user);
-  
-  if(user){
+  const { user: session } = useAuth0();
 
-    // console.log('##### USER #####', user.sub);
-    // console.log(findUser({ userAuth0Id: user.sub }).then(it => console.log(it)));
-    
-   
-    // console.log(findUser({ userAuth0Id: user.sub }).then(it => it.userAuth0Id));
-    // console.log(auth0Id);
-    
-    // if(auth0Id === false) {
-    //   return<UserForm userAuth0Id={user.sub}/>;
-    // }
-    // return findUser({ userAuth0Id: user.sub }).then(it => {
-    //   console.log(it);
-    //   if(!it.userAuth0Id) {
-        
-    //     return<UserForm userAuth0Id={user.sub}/>;
-    //   }
-
-    // return findUser({ userAuth0Id: user.sub })
-    //   .then(it => {
-    //     console.log(it);
-
-    //     if(it.userAuth0Id === false) {
-    //       return(
-    //         <>
-    //           <UserForm userAuth0Id={user.sub}/>
-    //         </>);
-    //     }
+  if(session){
     return(
       <div className={styles.all}>
+        <h1>UserHome</h1>
         <AuthHeaderContainer/>
         <div className={styles.images}>
           <FileUpload/>
@@ -54,6 +29,6 @@ export default function UserHome() {
       </div>
     );
   } else {
-    return<h1>hi</h1>;
+    return<h1>HIIIIII!!!!</h1>;
   }
 }

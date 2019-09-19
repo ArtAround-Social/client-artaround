@@ -1,17 +1,19 @@
 import React from 'react';
 import { BrowserRouter as Switch, Route } from 'react-router-dom';
 import AllArtistsContainer from '../../containers/AllArtistsContainer';
-import UserHome from '../home_pages/UserHome';
+import UserHome from '../home_pages/UsrHome';
 import ArtistProfile from '../profiles/ArtistProfile';
 import GalleryProfile from '../profiles/GalleryProfile';
 import LandingPage from './LandingPage';
 import { withSession } from '../../AuthProvider';
+import AuthContainer from '../../containers/AuthContainer';
 
 
 
 export default function Routes() {
   return(
     <Switch>
+      <Route path='/auth' component={withSession(AuthContainer)}/>
       <Route path='/userhome' component={withSession(UserHome)}/>
       <Route path='/artist/:id' component={ArtistProfile}/>
       <Route path='/gallery/:id' component={GalleryProfile}/>
