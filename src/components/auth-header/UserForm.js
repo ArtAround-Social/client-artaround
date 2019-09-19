@@ -3,7 +3,7 @@ import { createUser } from '../../services/userApi';
 import PropTypes from 'prop-types';
 
 function UserForm({ userAuth0Id }) {
-  const [userType, updateType] = useState('Artist');
+  const [userType, updateType] = useState('artist');
   const [name, updateName] = useState('');
   const [galleryName, updateGalleryName] = useState('');
   const [location, updateLocation] = useState('');
@@ -31,6 +31,7 @@ function UserForm({ userAuth0Id }) {
       email,
       rules
     });
+    console.log('FormSubmitted!!!');
   };
     
   return(
