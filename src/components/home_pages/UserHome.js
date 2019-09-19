@@ -1,4 +1,5 @@
 import React from 'react';
+// import Async from 'react-async';
 import UserImagesContainer from '../../containers/UserImagesContainer';
 import UserPartnersContainer from '../../containers/UserPartnersContainer';
 import { useAuth0 } from '../../AuthProvider';
@@ -7,12 +8,15 @@ import styles from './UserHome.css';
 import FileUpload from '../file-upload/FileUpload';
 import { Link } from 'react-router-dom';
 
-export default function UserHome() {
-  const { user } = useAuth0();
+// <UserForm userAuth0Id={user.sub} />
 
-  if(user){
+export default function UserHome() {
+  const { user: session } = useAuth0();
+
+  if(session){
     return(
       <div className={styles.all}>
+        <h1>UserHome</h1>
         <AuthHeaderContainer/>
         <div className={styles.images}>
           <FileUpload />
@@ -25,7 +29,7 @@ export default function UserHome() {
       </div>
     );
   } else {
-    return<h1>hi</h1>;
+    return<h1>HIIIIII!!!!</h1>;
   }
 }
 
