@@ -7,6 +7,8 @@ import GalleryProfile from '../profiles/GalleryProfile';
 import LandingPage from './LandingPage';
 import { withSession } from '../../AuthProvider';
 
+
+
 export default function Routes() {
   return(
     <Switch>

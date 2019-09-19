@@ -1,0 +1,15 @@
+.div {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(252, 252, 252);
+  border-radius: 5px;
+}
+
+.artist {
+  width: 200px;
+  height: 150px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}

@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { createUser } from '../../services/userApi';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-function UserForm() {
-  const [user_type, updateType] = useState('Artist');
+function UserForm({ userAuth0Id }) {
+  const [userType, updateType] = useState('Artist');
   const [name, updateName] = useState('');
   const [galleryName, updateGalleryName] = useState('');
   const [location, updateLocation] = useState('');
   const [phone, updatePhone] = useState('');
   const [email, updateEmail] = useState('');
   const [rules, updateRules] = useState('');
-  const userAuth0Id = 'auth0|12345678';
 
   const handleTypeChange = ({ target }) => updateType(target.value);
   const handleNameChange = ({ target }) => updateName(target.value);
@@ -23,7 +22,7 @@ function UserForm() {
   const handleSubmit = (event) => {
     event.preventDefault();
     createUser({
-      user_type,
+      userType,
       name,
       galleryName,
       location,
@@ -36,7 +35,7 @@ function UserForm() {
     
   return(
     <form onSubmit={handleSubmit}>
-      <select value={user_type} onChange={handleTypeChange}>
+      <select value={userType} onChange={handleTypeChange}>
         <option value="artist">Artist</option>
         <option value="gallery">Gallery</option>
       </select>
@@ -45,23 +44,15 @@ function UserForm() {
       <input placeholder='Location' value={location} onChange={handleLocationChange} required={true} />
       <input placeholder='Phone #' value={phone} onChange={handlePhoneChange} required={true} />
       <input placeholder='Email' value={email} onChange={handleEmailChange} required={true} />
-      <input placeholder='Rules' value={rules} onChange={handleRulesChange} required={true} />
+      <input placeholder='Rules' value={rules} onChange={handleRulesChange}/>
       <button>Submit</button>
     </form>
   );
 }
 
-// UserForm.propTypes = {
-//   handleSubmit: PropTypes.func.isRequired,
-//   handleTypeChange: PropTypes.func.isRequired,
-//   userType: PropTypes.string.isRequired,
-//   userName: PropTypes.string.isRequired,
-//   galleryName: PropTypes.string,
-//   location: PropTypes.string.isRequired,
-//   phone: PropTypes.string.isRequired,
-//   email: PropTypes.string.isRequired,
-//   rules: PropTypes.string
-// };
+UserForm.propTypes = {
+  userAuth0Id: PropTypes.string.isRequired
+};
 
 export default UserForm;
 

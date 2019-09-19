@@ -5,6 +5,7 @@
 export const getAccountType = state => state.user.user.account_type;
 export const getAccountName = state => state.user.user.name;
 
+export const getCurrentUser = state => state.user.user;
 export const getUserImages = state => state.userImages.images;
 export const getUserPartners = state => state.userPartners.partners;
 

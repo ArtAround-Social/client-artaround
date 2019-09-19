@@ -1,0 +1,40 @@
+ul {
+  list-style-type: none;
+  margin-left: -40px;
+  margin-top: -16px;
+}
+
+.partners {
+  overflow: hidden;
+  background-color: rgba(9, 38, 136, 0.822);
+  color: white;
+  border-radius: 5px;
+  text-shadow: none
+}
+
+.profile {
+  margin-left: 200px;
+}
+
+.item {
+  border: solid;
+  padding: 3px;
+  border-color: rgba(11, 7, 51, 0.445);
+  border-radius: 3px;
+  margin-bottom: 4px;
+  background-color:  rgb(252, 252, 252);
+}
+
+a:link, a:visited {
+  background-color: #080355d0;
+  color: white;
+  padding: 4px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+a:hover, a:active {
+  background-color:  #080355fa;
+}
