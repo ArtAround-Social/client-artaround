@@ -4,7 +4,7 @@ import styles from './ImageGrid.css';
 
 function ImageGrid({ images }) {
   const imageElement = images.map(image => (
-    <img key={image.id} src={image.url} width='200px'/>
+    <img key={image.id} src={image.url} width='400px'/>
   ));
   
   return(

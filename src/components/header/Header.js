@@ -5,10 +5,10 @@ import userImage from './user2.jpg';
 
 //passing stupid travis
 
-export default function Header({ user_type, name }) {
+export default function Header({ userType, name }) {
   return(
     <section className={styles.section}>
-      <h3>{user_type} Account</h3>
+      <h3>{userType} Account</h3>
       {name}
       <img src={userImage} alt='user png' height='40'/>
     </section>
@@ -16,6 +16,6 @@ export default function Header({ user_type, name }) {
 }
 
 Header.propTypes = {
-  user_type: PropTypes.string,
+  userType: PropTypes.string,
   name: PropTypes.string
 };

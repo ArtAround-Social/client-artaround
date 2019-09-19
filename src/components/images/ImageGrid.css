@@ -1,6 +1,6 @@
 .div {
-  width: 50%;
+  float: right;
   display: flex;
-  flex-wrap: wrap;
-  padding: 4px 4px;
+  flex-direction: column;
+  padding: 5px;
 }
