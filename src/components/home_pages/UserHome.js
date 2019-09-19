@@ -3,8 +3,8 @@ import UserImagesContainer from '../../containers/UserImagesContainer';
 import UserPartnersContainer from '../../containers/UserPartnersContainer';
 import UserForm from '../auth-header/UserForm';
 import { useAuth0 } from '../../AuthProvider';
-// import { findUser, userById } from '../../services/userApi';
-import AuthHeader from '../auth-header/AuthHeader';
+import { findUser } from '../../services/userApi';
+import AuthHeaderContainer from '../../containers/AuthHeaderContainer';
 import styles from './UserHome.css';
 import FileUpload from '../file-upload/FileUpload';
 import { Link } from 'react-router-dom';
@@ -16,7 +16,7 @@ export default function UserHome() {
   if(user){
 
     // console.log('##### USER #####', user.sub);
-    // const currentUser = findUser({ userAuth0Id: user.sub }).then(it => console.log(it));
+    // console.log(findUser({ userAuth0Id: user.sub }).then(it => console.log(it)));
     
    
     // console.log(findUser({ userAuth0Id: user.sub }).then(it => it.userAuth0Id));
@@ -44,7 +44,7 @@ export default function UserHome() {
     //     }
     return(
       <div className={styles.all}>
-        <AuthHeader/>
+        <AuthHeaderContainer/>
         <div className={styles.images}>
           <FileUpload/>
           <UserImagesContainer/>

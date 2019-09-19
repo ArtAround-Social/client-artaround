@@ -94,3 +94,16 @@ export const userById = ({ userID }) => {
       return res.json();
     });
 };
+
+export const allArtists = () => {
+  return fetch('https://artaround-test-app.herokuapp.com/api/v1/users/all-artists', {
+    method: 'GET',
+    headers: {
+      'Content-type': 'application/json'
+    }
+  })
+    .then(res => {
+      if(!res.ok) throw 'ERROR - can not get all artists';
+      return res.json();
+    });
+};
