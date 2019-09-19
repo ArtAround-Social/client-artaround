@@ -1,0 +1,16 @@
+.header {
+  overflow: hidden;
+  background-color: rgba(9, 38, 136, 0.822);
+  color: white;
+  border-radius: 5px;
+}
+
+button {
+  float: right;
+  background-color: rgb(4, 4, 105);
+  border: none;
+  color: rgba(255, 255, 255, 0.815);
+  padding: 8px 8px;
+  border-radius: 3px;
+  margin: 7px;
+}

@@ -1,0 +1,14 @@
+.info {
+    float: left;
+    min-width: 500px;
+    max-width: 400px;
+}
+
+.partners {
+    float: left;
+    min-width: 500px;
+  }
+  
+  .images {
+    float: right;
+  }
