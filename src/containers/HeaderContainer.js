@@ -3,7 +3,7 @@ import Header from '../components/header/Header';
 import { getAccountType, getAccountName } from '../selectors/allSelectors';
 
 const mapStateToProps = state => ({
-  user_type: getAccountType(state),
+  userType: getAccountType(state),
   name: getAccountName(state)
 });
 

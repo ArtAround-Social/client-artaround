@@ -6,7 +6,7 @@ describe('Header component', () => {
   it('renders header', () => {
     const wrapper = shallow(
       <Header
-        user_type = 'Artist'
+        userType = 'Artist'
         handleLogout = {() => { }}
         name = 'vasily'
       />
