@@ -56,16 +56,3 @@ UserForm.propTypes = {
 };
 
 export default UserForm;
-
-// Previous props
-// {
-//   handleSubmit,
-//   handleTypeChange,
-//   userType,
-//   userName,
-//   galleryName,
-//   location,
-//   phone,
-//   email,
-//   rules
-// }
