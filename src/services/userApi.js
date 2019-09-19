@@ -67,6 +67,7 @@ export const postImage = ({ artName, imgUrl, mediums, styles, artist }) => {
     });
 };
 
+
 // export const postPartnership = ({ artist, gallery, active }) => {
 //   return fetch('https://artaround-test-app.herokuapp.com/api/v1/partnerships', {
 //     method: 'POST',
@@ -81,15 +82,15 @@ export const postImage = ({ artName, imgUrl, mediums, styles, artist }) => {
 //     });
 // };
 
-// export const userById = ({ userID }) => {
-//   return fetch(`https://artaround-test-app.herokuapp.com/api/v1/users/${userID}`, {
-//     method: 'GET',
-//     headers: {
-//       'Content-type': 'application/json'
-//     }
-//   })
-//     .then(res => {
-//       if(!res.ok) throw 'ERROR - can not post image';
-//       return res.json();
-//     });
-// };
+export const userById = ({ userID }) => {
+  return fetch(`https://artaround-test-app.herokuapp.com/api/v1/users/${userID}`, {
+    method: 'GET',
+    headers: {
+      'Content-type': 'application/json'
+    }
+  })
+    .then(res => {
+      if(!res.ok) throw 'ERROR - can not post image';
+      return res.json();
+    });
+};
