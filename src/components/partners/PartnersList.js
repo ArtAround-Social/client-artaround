@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PartnerItem from './PartnerItem';
+import styles from './PartnersList.css';
 
 function PartnersList({ partners }) {
   const partnersElement = partners.map(partner => (
@@ -10,7 +11,10 @@ function PartnersList({ partners }) {
   ));
 
   return(
-    <ul>{partnersElement}</ul>
+    <div>
+      <h4 className={styles.partners}>PARTNERS</h4>
+      <ul className={styles.list}>{partnersElement}</ul>
+    </div>
   );
 }
 

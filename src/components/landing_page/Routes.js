@@ -10,8 +10,6 @@ import { withSession } from '../../AuthProvider';
 
 
 export default function Routes() {
-  // const { user } = useAuth0();
-  // console.log(user);
   return(
     <Switch>
       <Route path='/userhome' component={withSession(UsrHome)}/>

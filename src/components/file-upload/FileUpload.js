@@ -2,6 +2,8 @@ import React, { useCallback } from 'react';
 // import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
 import { postImage } from '../../services/fileApi';
+import styles from './FileUpload.css';
+
 // this id is just there to make things work for now
 // replace with correct id and pass to postImage function line 13
 const id = '5d7bfa5d0ae46c485efe113d';
@@ -20,7 +22,7 @@ function FileUpload(){
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return(
-    <div {...getRootProps()}>
+    <div className={styles.upload} {...getRootProps()}>
       <input {...getInputProps()} />
       {isDragActive 
         ? (<p>Drop the image here ...</p>)

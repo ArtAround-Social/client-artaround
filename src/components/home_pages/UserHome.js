@@ -2,10 +2,11 @@ import React from 'react';
 // import Async from 'react-async';
 import UserImagesContainer from '../../containers/UserImagesContainer';
 import UserPartnersContainer from '../../containers/UserPartnersContainer';
-import UserForm from '../auth-header/UserForm';
 import { useAuth0 } from '../../AuthProvider';
-import { findUser } from '../../services/userApi';
-import AuthHeader from '../auth-header/AuthHeader';
+import AuthHeaderContainer from '../../containers/AuthHeaderContainer';
+import styles from './UserHome.css';
+import FileUpload from '../file-upload/FileUpload';
+import { Link } from 'react-router-dom';
 
 // <UserForm userAuth0Id={user.sub} />
 
@@ -14,16 +15,14 @@ export default function UserHome() {
   // console.log(user);
   
   if(user){
-    findUser({ userAuth0Id: user.sub }).then(it => {
-      console.log(it);
-      return<UserForm />;
-    });
-
     // let userExistsCondition;
     // console.log('#### USER EXISTS COND ###', userExistsCondition);
 
     // console.log('##### USER #####', user.sub);
     // console.log(findUser({ userAuth0Id: user.sub }).then(it => console.log(it)));
+    
+   
+    // console.log(findUser({ userAuth0Id: user.sub }).then(it => it.userAuth0Id));
     // console.log(auth0Id);
     
     // if(auth0Id === false) {
@@ -47,11 +46,17 @@ export default function UserHome() {
     //         </>);
     //     }
     return(
-      <>
-        <AuthHeader/>
-        <UserImagesContainer/>
-        <UserPartnersContainer/>
-      </>
+      <div className={styles.all}>
+        <AuthHeaderContainer/>
+        <div className={styles.images}>
+          <FileUpload/>
+          <UserImagesContainer/>
+        </div>
+        <div className={styles.partners}>
+          <UserPartnersContainer/>
+          <Link to='/allartists'>Discover New Artist</Link>
+        </div>
+      </div>
     );
   } else {
     return<h1>HIIIIII!!!!</h1>;

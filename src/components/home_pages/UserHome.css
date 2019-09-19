@@ -1,3 +1,8 @@
-.form {
-  display: none;
+.partners {
+  float: left;
+  min-width: 500px;
+}
+
+.images {
+  float: right;
 }
