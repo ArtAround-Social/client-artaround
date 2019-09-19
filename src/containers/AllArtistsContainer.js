@@ -11,7 +11,7 @@ const mapDispatchToProps = dispatch => ({
   getAllArtists() {
     dispatch(getArtists());
   }
-})
+});
 
 export default connect(
   mapStateToProps,

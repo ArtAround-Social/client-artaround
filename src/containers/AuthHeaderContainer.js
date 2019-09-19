@@ -9,6 +9,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   userById(userSub) {
+    console.log(userSub);
+    
     dispatch(getUser(userSub));
   }
 });

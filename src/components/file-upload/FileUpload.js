@@ -1,23 +1,25 @@
-import React, { useCallback } from 'react';
-// import PropTypes from 'prop-types';
+import React, { useCallback, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
 import { postImage } from '../../services/fileApi';
 import styles from './FileUpload.css';
 
 // this id is just there to make things work for now
 // replace with correct id and pass to postImage function line 13
-const id = '5d7bfa5d0ae46c485efe113d';
 // auth should give us either type artist or gallery
 // if type artist post image type should be artwork otherwise gallery
-const type = 'gallery';
 
 
-function FileUpload(){
+function FileUpload({ id, type }){
   const onDrop = useCallback(
     ([file]) => {
       postImage(file, id, type);
     }
   );
+
+  useEffect(() => {
+    postImage(id, type);
+  }, []);
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
@@ -32,8 +34,9 @@ function FileUpload(){
   );
 }
 
-// FileUpload.propTypes = {
-//   onDrop: PropTypes.func.isRequired,
-// };
+FileUpload.propTypes = {
+  id: PropTypes.string,
+  type: PropTypes.string,
+};
 
 export default FileUpload;

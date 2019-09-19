@@ -107,3 +107,20 @@ export const allArtists = () => {
       return res.json();
     });
 };
+
+
+export const userImages = ( user  = {}) => {
+  console.log(user._id);
+  
+  return fetch(`https://artaround-test-app.herokuapp.com/api/v1/users/user-with-artwork/${user._id}`, {
+    method: 'GET',
+    headers: {
+      'Content-type': 'application/json'
+    }
+  })
+    .then(res => {
+      if(!res.ok) throw 'ERROR - can not get iser images';
+      return res.json();
+    });
+};
+

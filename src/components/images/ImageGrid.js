@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ImageGrid.css';
 
-function ImageGrid({ images }) {
+function ImageGrid({ getUserImages, images, user }) {
   const imageElement = images.map(image => (
     <img key={image.id} src={image.url}/>
   ));
+  console.log(user);
+    
+  useEffect(() => {
+    if(user && user._id) getUserImages(user);
+  }, [user]);
 
   return(
     <>
@@ -21,10 +26,13 @@ function ImageGrid({ images }) {
 
 
 ImageGrid.propTypes = {
+  getUserImages: PropTypes.func,
   images: PropTypes.arrayOf(PropTypes.shape({
     image: PropTypes.string
   })),
-  small: PropTypes.func
+  user: PropTypes.shape({
+    _id: PropTypes.string
+  })
 };
 
 export default ImageGrid;

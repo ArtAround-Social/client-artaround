@@ -1,11 +1,23 @@
 import { connect } from 'react-redux';
 import ImageGrid from '../components/images/ImageGrid';
-import { getUserImages } from '../selectors/allSelectors';
+import { getUserImages, getCurrentUser } from '../selectors/allSelectors';
+import { getImages } from '../actions/userActions';
 
 const mapStateToProps = state => ({
-  images: getUserImages(state)
+  images: getUserImages(state),
+  user: getCurrentUser(state)
+});
+
+
+
+const mapDispatchToProps = dispatch => ({
+  getUserImages(user) {
+    dispatch(getImages(user));
+  }
+  
 });
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(ImageGrid);

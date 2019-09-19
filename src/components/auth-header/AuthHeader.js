@@ -3,16 +3,18 @@ import { useAuth0 } from '../../AuthProvider';
 import styles from './AuthHeader.css';
 import PropTypes from 'prop-types';
 
-export default function AuthHeader({currentUser, userById }) {
+export default function AuthHeader({ userById }) {
   const { isAuthenticated, auth0Client, user: session } = useAuth0();
   const login = () => auth0Client.loginWithRedirect();
   const logout = () => auth0Client.logout({ returnTo: process.env.CLIENT_URL });
 
-  // useEffect(() => {
-  //   if(session) {
-  //     userById(session.sub);
-  //   }
-  // }, []);
+  useEffect(() => {
+    console.log(session);
+    
+    if(session) {
+      userById(session.sub);
+    }
+  }, []);
   
   return(
     <section className={styles.header}>
