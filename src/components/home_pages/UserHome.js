@@ -1,9 +1,7 @@
 import React from 'react';
 import UserImagesContainer from '../../containers/UserImagesContainer';
 import UserPartnersContainer from '../../containers/UserPartnersContainer';
-import UserForm from '../auth-header/UserForm';
 import { useAuth0 } from '../../AuthProvider';
-import { findUser } from '../../services/userApi';
 import AuthHeaderContainer from '../../containers/AuthHeaderContainer';
 import styles from './UserHome.css';
 import FileUpload from '../file-upload/FileUpload';
