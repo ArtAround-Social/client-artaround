@@ -1,4 +1,5 @@
 import React from 'react';
+// import Async from 'react-async';
 import UserImagesContainer from '../../containers/UserImagesContainer';
 import UserPartnersContainer from '../../containers/UserPartnersContainer';
 import UserForm from '../auth-header/UserForm';
@@ -13,14 +14,9 @@ export default function UserHome() {
   // console.log(user);
   
   if(user){
-
-    const doesHeExist = async(userSub) => {
-      
-    }
-
     findUser({ userAuth0Id: user.sub }).then(it => {
       console.log(it);
-      return<h1>Hellow</h1>;
+      return<UserForm />;
     });
 
     // let userExistsCondition;
@@ -50,13 +46,13 @@ export default function UserHome() {
     //           <UserForm userAuth0Id={user.sub}/>
     //         </>);
     //     }
-    // return(
-    //   <>
-    //     <AuthHeader/>
-    //     <UserImagesContainer/>
-    //     <UserPartnersContainer/>
-    //   </>
-    // );
+    return(
+      <>
+        <AuthHeader/>
+        <UserImagesContainer/>
+        <UserPartnersContainer/>
+      </>
+    );
   } else {
     return<h1>HIIIIII!!!!</h1>;
   }
