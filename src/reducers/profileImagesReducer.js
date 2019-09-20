@@ -1,6 +1,8 @@
 
 const initialState = {
-  images: []
+  images: [
+    { id: '', imgUrl: '' }
+  ]
 };
 
 export default function reducer(state = initialState, action) {

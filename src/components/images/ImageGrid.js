@@ -19,6 +19,7 @@ function ImageGrid({ getUserImagesArr, images, user }) {
 
   return(
     <>
+        {/* <h4>{user.userType} account</h4> */}
     <FileUpload id={user._id} type={user.userType}/>
     <div className={styles.div}>
       <div className={styles.images}>
