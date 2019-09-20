@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import PartnersList from '../components/partners/PartnersList';
 import { getUserPartners, getCurrentUser } from '../selectors/allSelectors';
-import { getPartnerships } from '../actions/userActions';
+import { getPartnerships } from '../actions/partnershipActions';
 
 const mapStateToProps = state => ({
   partners: getUserPartners(state),
