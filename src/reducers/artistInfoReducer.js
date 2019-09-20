@@ -7,8 +7,7 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   switch(action.type) {
     case ADD_USER_BY_ID:
-      console.log('REDUCER LOG ####', action.payload);
-      return({ user: action.payload });
+      return({ ...state, user: action.payload });
     default:
       return state;
   }

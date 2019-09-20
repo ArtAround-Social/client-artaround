@@ -1,4 +1,3 @@
-// import { userById } from '../services/userApi';
 import { findUserByAuthId, userById } from '../services/userApi';
 
 
@@ -9,10 +8,7 @@ export const getAuthUser = (userSub) => ({
 });
 
 export const ADD_USER_BY_ID = 'ADD_USER_BY_ID';
-export const addUserById = (userId) => {
-  userById({ userId }).then(res => console.log('ACTION ####', typeof res));
-  return({
-    type: ADD_USER_BY_ID,
-    payload: userById({ userId })
-  });
-};
+export const addUserById = (userId) => ({
+  type: ADD_USER_BY_ID,
+  payload: userById({ userId })
+});
