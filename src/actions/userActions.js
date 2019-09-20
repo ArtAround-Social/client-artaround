@@ -1,5 +1,5 @@
-import { findUserByAuthId, userById } from '../services/userApi';
-
+import { findUserByAuthId, userById, userImages } from '../services/userApi';
+import { getUserPartnerships } from '../services/partnershipApi';
 
 export const GET_AUTH_USER = 'GET_AUTH_USER';
 export const getAuthUser = (userSub) => ({
