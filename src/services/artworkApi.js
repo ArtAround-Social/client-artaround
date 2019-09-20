@@ -1,6 +1,8 @@
+const apiUrl = process.env.API_URL;
+
 //fetch call to api to return artists with artworks
 export const getArtistsWithArtwork = () => {
-  return fetch('https://artaround-test-app.herokuapp.com/api/v1/users/user-with-artwork', {
+  return fetch(`${apiUrl}/api/v1/users/user-with-artwork`, {
     method: 'GET',
     headers: {
       'Content-type': 'application/json'
