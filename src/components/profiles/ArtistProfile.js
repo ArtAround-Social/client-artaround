@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import ProfileImagesContainer from '../../containers/ProfileImagesContainer';
+// import ProfileImagesContainer from '../../containers/ProfileImagesContainer';
 import ProfilePartnersContainer from '../../containers/ProfilePartnersContainer';
 import RequestButton from './RequestButton';
 import AuthHeader from '../auth-header/AuthHeader';
