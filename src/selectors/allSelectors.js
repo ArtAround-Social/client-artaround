@@ -14,13 +14,14 @@ export const getInvites = state => state.invites.invites;
 export const getProfileImages = state => state.profileImages.images;
 export const getProfilePartners = state => state.profilePartners.partners;
 
-export const getArtistName = state => state.artistInfo.profileInfo.artistName;
-export const getArtistLocation = state => state.artistInfo.profileInfo.artistLocation;
-export const getArtistStyles = state => state.artistInfo.profileInfo.styles;
-export const getArtistMediums = state => state.artistInfo.profileInfo.mediums;
-export const getArtistPoster = state => state.artistInfo.profileInfo.poster;
-export const getArtistPhone = state => state.artistInfo.profileInfo.phone;
-export const getArtistEmail = state => state.artistInfo.profileInfo.email;
+export const getArtistInfoUser = state => state.artistInfo.user;
+// export const getArtistName = state => state.artistInfo.profileInfo.artistName;
+// export const getArtistLocation = state => state.artistInfo.profileInfo.artistLocation;
+// export const getArtistStyles = state => state.artistInfo.profileInfo.styles;
+// export const getArtistMediums = state => state.artistInfo.profileInfo.mediums;
+// export const getArtistPoster = state => state.artistInfo.profileInfo.poster;
+// export const getArtistPhone = state => state.artistInfo.profileInfo.phone;
+// export const getArtistEmail = state => state.artistInfo.profileInfo.email;
 
 export const getGalleryName = state => state.galleryInfo.profileInfo.galleryName;
 export const getGalleryLocation = state => state.galleryInfo.profileInfo.galleryLocation;
