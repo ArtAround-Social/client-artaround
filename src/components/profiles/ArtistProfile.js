@@ -13,7 +13,7 @@ function ArtistPropfile() {
       <AuthHeader/>
       <h2>artist</h2>
       <div className={styles.images}>
-        <ProfileImagesContainer/>
+        {/* <ProfileImagesContainer/> */}
       </div>
       <div className={styles.info}>
         <ArtistInfoContainers/>

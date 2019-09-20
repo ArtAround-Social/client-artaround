@@ -5,8 +5,10 @@ import styles from './AllArtists.css';
 import image from '../../../assets/logo.png';
 
 function AnArtist({ artist }) {
+  console.log(artist);
+  
   return(
-    <Link className={styles.artist} to='/artist/:id'>
+    <Link className={styles.artist} to='/artistprofile'>
       <img  src={image} width='150px'/>
       <p>{artist.name}</p>
     </Link>

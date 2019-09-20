@@ -9,18 +9,26 @@ function AllArtists({ allartists, getAllArtists }) {
     <div className={styles.item} key={artist.id}>
       <AnArtist artist={artist} />
     </div>
+    
   ));
-
+    
   useEffect(() => {
     getAllArtists();
   }, []);
 
   return(
-    <>
+    <div>
       <AuthHeader/>
-      <div>All kindsof useful filters should be here....</div>
+      <p>LET'S IMAGINE WE CAN FILTER ALL THESE ARTISTS... 😊
+        <button>Price</button>
+        <button>Style</button>
+        <button>Medium</button>
+        <button>Size</button>
+        <button>Artist's name</button>
+        <button>Location</button>
+      </p><br/>
       <div className={styles.div}>{artistElement}</div>
-    </>
+    </div>
   );
 }
 

@@ -15,7 +15,7 @@ export default function Routes() {
     <Switch>
       <Route path='/auth' component={withSession(AuthContainer)}/>
       <Route path='/userhome' component={withSession(UserHome)}/>
-      <Route path='/artist/:id' component={ArtistProfile}/>
+      <Route path='/artistprofile' component={ArtistProfile}/>
       <Route path='/gallery/:id' component={GalleryProfile}/>
       <Route path='/allartists' component={AllArtistsContainer}/>
       <Route exact path='/' component={LandingPage}/>
