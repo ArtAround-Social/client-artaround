@@ -3,7 +3,7 @@ import React from 'react';
 import UserImagesContainer from '../../containers/UserImagesContainer';
 import UserPartnersContainer from '../../containers/UserPartnersContainer';
 import { useAuth0 } from '../../AuthProvider';
-import AuthHeaderContainer from '../../containers/AuthHeaderContainer';
+// import AuthHeaderContainer from '../../containers/AuthHeaderContainer';
 import styles from './UserHome.css';
 import { Link } from 'react-router-dom';
 
@@ -15,8 +15,6 @@ export default function UserHome() {
   if(session){
     return(
       <div className={styles.all}>
-        <h1>UserHome</h1>
-        <AuthHeaderContainer/>
         <div className={styles.images}>
           <UserImagesContainer/>
         </div>
