@@ -18,6 +18,7 @@ function AllArtists({ allartists, getAllArtists }) {
   return(
     <>
       <AuthHeader/>
+      <div>All kindsof useful filters should be here....</div>
       <div className={styles.div}>{artistElement}</div>
     </>
   );
