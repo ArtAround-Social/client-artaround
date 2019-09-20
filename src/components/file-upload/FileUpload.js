@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { useDropzone } from 'react-dropzone';
 import { postImage } from '../../services/fileApi';
@@ -17,10 +17,6 @@ function FileUpload({ id, type }){
     }
   );
 
-  useEffect(() => {
-    postImage(id, type);
-  }, []);
-
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
   return(
@@ -36,7 +32,7 @@ function FileUpload({ id, type }){
 
 FileUpload.propTypes = {
   id: PropTypes.string,
-  type: PropTypes.string,
+  type: PropTypes.string
 };
 
 export default FileUpload;

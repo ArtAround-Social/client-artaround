@@ -1,19 +1,25 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styles from './ImageGrid.css';
+import shortid from 'shortid';
+import FileUpload from '../file-upload/FileUpload';
 
-function ImageGrid({ getUserImages, images, user }) {
+function ImageGrid({ getUserImagesArr, images, user }) {
   const imageElement = images.map(image => (
-    <img key={image.id} src={image.url}/>
+    <img key={shortid.generate()} src={image.imgUrl}/>
   ));
   console.log(user);
     
   useEffect(() => {
-    if(user && user._id) getUserImages(user);
+    if(user && user._id) getUserImagesArr(user);
+    // if(user && user._id) updateUserImagesArr(user);
   }, [user]);
+
+
 
   return(
     <>
+    <FileUpload id={user._id} type={user.userType}/>
     <div className={styles.div}>
     
       <div className={styles.images}>
@@ -26,12 +32,14 @@ function ImageGrid({ getUserImages, images, user }) {
 
 
 ImageGrid.propTypes = {
-  getUserImages: PropTypes.func,
+  updateUserImagesArr: PropTypes.func,
+  getUserImagesArr: PropTypes.func,
   images: PropTypes.arrayOf(PropTypes.shape({
     image: PropTypes.string
   })),
   user: PropTypes.shape({
-    _id: PropTypes.string
+    _id: PropTypes.string,
+    userType: PropTypes.string
   })
 };
 

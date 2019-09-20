@@ -4,6 +4,7 @@ export const postImage = (file, id, type) => {
   data.append('id', id);
   return fetch(`${process.env.API_URL}/api/v1/files/${type}`, {
     method: 'POST',
+    mode: 'no-cors',
     body: data
   })
     .then(res => {

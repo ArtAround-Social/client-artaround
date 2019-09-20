@@ -14,7 +14,7 @@ function PartnerItem({ partner }) {
 
 PartnerItem.propTypes = {
   partner: PropTypes.shape({
-    name: PropTypes.string.isRequired
+    name: PropTypes.string
   })
 };
 

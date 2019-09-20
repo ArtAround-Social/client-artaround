@@ -11,7 +11,7 @@ const mapStateToProps = state => ({
 
 
 const mapDispatchToProps = dispatch => ({
-  getUserImages(user) {
+  getUserImagesArr(user) {
     dispatch(getImages(user));
   }
   

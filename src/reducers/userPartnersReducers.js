@@ -1,18 +1,14 @@
+import { GET_PARTNERSHIPS } from '../actions/userActions';
 
 const initialState = {
-  partners: [
-    { id: 1, name: 'name 1' },
-    { id: 12, name: 'name 2' },
-    { id: 153, name: 'name 3' },
-    { id: 163, name: 'name 4' },
-    { id: 173, name: 'name 5' },
-  ]
+  partners: []
 };
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
+    case GET_PARTNERSHIPS:
+      return{ ...state, partners: action.payload };
     default:
-      
       return state;
   }
 }

@@ -25,8 +25,9 @@ export const getPartnership = () => {
     });
 };
 
-export const getGalArtistPartnership = () => {
-  return fetch('https://artaround-test-app.herokuapp.com/api/v1/users/gallery-partners', {
+export const getUserPartnerships = (user  = {}) => {
+  
+  return fetch(`https://artaround-test-app.herokuapp.com/api/v1/partnerships/user-partners/${user._id}`, {
     method: 'GET',
     headers: {
       'Content-type': 'application/json'
