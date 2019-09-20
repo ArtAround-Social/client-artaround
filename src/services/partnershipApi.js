@@ -1,12 +1,12 @@
 const apiUrl = process.env.API_URL;
 
-export const postPartnership = ({ artist, gallery, active }) => {
+export const postPartnership = ({ artists }) => {
   return fetch(`${apiUrl}/api/v1/partnerships`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json'
     },
-    body: JSON.stringify({ artist, gallery, active })
+    body: JSON.stringify({ artists })
   })
     .then(res => {
       if(!res.ok) throw 'ERROR - unable to post PARTNERSHIP';
