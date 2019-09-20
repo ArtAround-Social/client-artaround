@@ -7,7 +7,7 @@ import RequestButton from './RequestButton';
 import AuthHeader from '../auth-header/AuthHeader';
 import styles from './Profile.css';
 
-function ArtistPropfile() {
+function ArtistProfile() {
   return(
     <div>
       <AuthHeader/>
@@ -26,8 +26,8 @@ function ArtistPropfile() {
   );
 }
 
-ArtistPropfile.propTypes = {
+ArtistProfile.propTypes = {
 
 };
 
-export default ArtistPropfile;
+export default ArtistProfile;

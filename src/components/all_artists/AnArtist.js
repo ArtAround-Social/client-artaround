@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import styles from './AllArtists.css';
 
-function AnArtist({ artist }) {
+function AnArtist({ artist, imgUrl }) {
+  const placeholder = '../../../assets/placeholder.jpg';
+  console.log('ARTIST', artist);
   return(
-    <Link className={styles.artist} to='/artist/:id'>
-      <img  src={artist.imgUrl} width='150px'/>
+    <Link className={styles.artist} to={(`/artist/${artist._id}`)}>
       <p>{artist.name}</p>
+      <img  src={imgUrl || placeholder} width='150px'/>
     </Link>
   );
 }
@@ -15,8 +17,9 @@ function AnArtist({ artist }) {
 AnArtist.propTypes = {
   artist: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    imgUrl: PropTypes.string.isRequired
-  })
+    _id: PropTypes.string
+  }),
+  imgUrl: PropTypes.string
 };
 
 export default AnArtist;

@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { createUser } from '../../services/userApi';
 import PropTypes from 'prop-types';
 
-function UserForm({ userAuth0Id }) {
+function UserForm({ userAuth0Id, getUser }) {
+
   const [userType, updateType] = useState('artist');
   const [name, updateName] = useState('');
   const [galleryName, updateGalleryName] = useState('');
@@ -31,6 +32,7 @@ function UserForm({ userAuth0Id }) {
       email,
       rules
     });
+    getUser(userAuth0Id);
     console.log('FormSubmitted!!!');
   };
     
@@ -52,7 +54,8 @@ function UserForm({ userAuth0Id }) {
 }
 
 UserForm.propTypes = {
-  userAuth0Id: PropTypes.string.isRequired
+  userAuth0Id: PropTypes.string.isRequired,
+  getUser: PropTypes.func.isRequired
 };
 
 export default UserForm;

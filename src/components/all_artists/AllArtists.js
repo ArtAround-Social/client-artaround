@@ -4,9 +4,11 @@ import AnArtist from './AnArtist';
 import styles from './AllArtists.css';
 import AuthHeader from '../auth-header/AuthHeader';
 
+const shortid = require('shortid');
 function AllArtists({ allartists, getAllArtists }) {
+  console.log('ALLARTISTS', allartists);
   const artistElement = allartists.map(artist => (
-    <div className={styles.item} key={artist.id}>
+    <div key={shortid.generate()} className={styles.item}>
       <AnArtist artist={artist} />
     </div>
   ));
@@ -18,7 +20,9 @@ function AllArtists({ allartists, getAllArtists }) {
   return(
     <>
       <AuthHeader/>
-      <div className={styles.div}>{artistElement}</div>
+      <div className={styles.div}>
+        {artistElement}
+      </div>
     </>
   );
 }
@@ -26,8 +30,7 @@ function AllArtists({ allartists, getAllArtists }) {
 AllArtists.propTypes = {
   getAllArtists: PropTypes.func,
   allartists: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    imgUrl: PropTypes.string.isRequired
+    name: PropTypes.string.isRequired
   }))
 };
 
