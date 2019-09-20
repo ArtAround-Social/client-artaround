@@ -35,7 +35,6 @@ export default function AuthPage({ userById, currentUser }) {
     <>
       <AuthHeader />
       {data}
-      <h1>Hello</h1>
     </>
   );
 }

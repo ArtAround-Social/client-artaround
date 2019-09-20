@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import AuthHeader from '../components/auth-header/AuthHeader';
-import { getUser } from '../actions/userActions';
+import { getAuthUser } from '../actions/userActions';
 import { getCurrentUser } from '../selectors/allSelectors';
 
 const mapStateToProps = state => ({
@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   userById(userSub) {
-    dispatch(getUser(userSub));
+    dispatch(getAuthUser(userSub));
   }
 });
 

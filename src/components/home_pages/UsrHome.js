@@ -1,12 +1,12 @@
 import Async from 'react-async';
 import React from 'react';
 import { useAuth0 } from '../../AuthProvider';
-import { findUser } from '../../services/userApi';
+import { findUserByAuthId } from '../../services/userApi';
 import UserForm from '../auth-header/UserForm';
 import FileUpload from '../file-upload/FileUpload';
 import AuthHeader from '../auth-header/AuthHeader';
 
-const whoDis = ({ userSub }) => findUser({ userAuth0Id: userSub });
+const whoDis = ({ userSub }) => findUserByAuthId({ userAuth0Id: userSub });
 
 const MyComponent = () => {
   const { user } = useAuth0();

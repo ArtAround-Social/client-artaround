@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { getUser } from '../actions/userActions';
+import { getAuthUser } from '../actions/userActions';
 import { getCurrentUser } from '../selectors/allSelectors';
 import AuthPage from '../components/auth-header/AuthPage';
 
@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   userById(userSub) {
-    dispatch(getUser(userSub));
+    dispatch(getAuthUser(userSub));
   }
 });
 
