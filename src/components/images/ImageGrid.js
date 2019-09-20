@@ -10,7 +10,6 @@ function ImageGrid({ images }) {
   return(
     <>
     <div className={styles.div}>
-    
       <div className={styles.images}>
         {imageElement}
       </div>
