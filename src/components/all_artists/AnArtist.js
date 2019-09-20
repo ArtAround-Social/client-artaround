@@ -7,7 +7,7 @@ import image from '../../../assets/logo.png';
 function AnArtist({ artist }) {
   
   return(
-    <Link className={styles.artist} to='/artistprofile'>
+    <Link className={styles.artist} to='/artist/:id'>
       <img  src={image} width='150px'/>
       <p>{artist.name}</p>
     </Link>
