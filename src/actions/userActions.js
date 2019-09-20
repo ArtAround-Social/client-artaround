@@ -1,5 +1,4 @@
 import { findUserByAuthId, userById, userImages } from '../services/userApi';
-import { getUserPartnerships } from '../services/partnershipApi';
 
 export const GET_AUTH_USER = 'GET_AUTH_USER';
 export const getAuthUser = (userSub) => ({
@@ -13,20 +12,14 @@ export const addUserById = (userId) => ({
   payload: userById({ userId })
 });
 
+export const ADD_ARTIST_INFO = 'ADD_ARTIST_INFO';
+export const addArtistInfo = (userId) => ({
+  type: ADD_ARTIST_INFO,
+  payload: userById({ userId })
+});
+
 export const GET_IMAGES = 'GET_IMAGES';
 export const getImages = (user) => ({
   type: GET_IMAGES,
   payload: userImages(user)
 });
-
-export const GET_PARTNERSHIPS = 'GET_PARTNERSHIPS';
-export const getPartnerships = (user) => ({
-  type: GET_PARTNERSHIPS,
-  payload: getUserPartnerships(user)
-}); 
-
-// export const UPDATE_IMAGES = 'UPDATE_IMAGES';
-// export const updateImages = (user) => ({
-//   type: UPDATE_IMAGES,
-//   payload: postImage(user)
-// });

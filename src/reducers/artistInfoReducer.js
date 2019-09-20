@@ -1,4 +1,4 @@
-import { ADD_USER_BY_ID } from '../actions/userActions';
+import { ADD_ARTIST_INFO } from '../actions/userActions';
 
 const initialState = {
   user: {}
@@ -6,7 +6,7 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
-    case ADD_USER_BY_ID:
+    case ADD_ARTIST_INFO:
       return({ ...state, user: action.payload });
     default:
       return state;
