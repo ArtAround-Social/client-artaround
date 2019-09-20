@@ -1,18 +1,14 @@
+import { ADD_USER_BY_ID } from '../actions/userActions';
 
 const initialState = {
-  profileInfo: {
-    artistName: 'Vasily Markov',
-    artistLocation: 'Portland',
-    styles: [{ id:1, style: 'abstract' }, { id: 2, style: 'modern' }],
-    mediums: [{ id:1, medium: 'oil' }, { id: 2, medium: 'ink' }],
-    poster: { id: 34, poster: 'https://www.goodfreephotos.com/albums/people/man-sitting-on-the-beach-monochrome.jpg' },
-    phone: '503-954-4973',
-    email: 'markovavasily@gmail.com'
-  }
+  user: {}
 };
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
+    case ADD_USER_BY_ID:
+      console.log('REDUCER LOG ####', action.payload);
+      return({ user: action.payload });
     default:
       return state;
   }
