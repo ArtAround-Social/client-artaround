@@ -1,13 +1,23 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import ProfileImagesContainer from '../../containers/ProfileImagesContainer';
 import ProfilePartnersContainer from '../../containers/ProfilePartnersContainer';
-import ArtistInfoContainers from '../../containers/ArtistInfoContainers';
 import RequestButton from './RequestButton';
 import AuthHeader from '../auth-header/AuthHeader';
 import styles from './Profile.css';
+// import { addUserById } from '../../actions/userActions';
 
-function ArtistPropfile() {
+function ArtistProfile({ match: { params }, addUser, user }) {
+  useEffect(() => {
+    addUser(params.id);
+  }, []);
+
+  console.log(user);
+  // componentDidMount(){
+  //   console.log('PARAMS', this.props.match.params.id);
+  //   addUserById(this.props.match.params.id);
+  // }
+  
   return(
     <div>
       <AuthHeader/>
@@ -16,7 +26,6 @@ function ArtistPropfile() {
         {/* <ProfileImagesContainer/> */}
       </div>
       <div className={styles.info}>
-        <ArtistInfoContainers/>
       </div>
       <div className={styles.partners}>
         <ProfilePartnersContainer/>
@@ -26,8 +35,10 @@ function ArtistPropfile() {
   );
 }
 
-ArtistPropfile.propTypes = {
-
+ArtistProfile.propTypes = {
+  match: PropTypes.object.isRequired,
+  addUser: PropTypes.func.isRequired,
+  user: PropTypes.object.isRequired
 };
 
-export default ArtistPropfile;
+export default ArtistProfile;

@@ -5,7 +5,6 @@ import styles from './AllArtists.css';
 import image from '../../../assets/logo.png';
 
 function AnArtist({ artist }) {
-  console.log(artist);
   
   return(
     <Link className={styles.artist} to='/artistprofile'>
@@ -18,8 +17,9 @@ function AnArtist({ artist }) {
 AnArtist.propTypes = {
   artist: PropTypes.shape({
     name: PropTypes.string.isRequired,
-    imgUrl: PropTypes.string.isRequired
-  })
+    _id: PropTypes.string
+  }),
+  imgUrl: PropTypes.string
 };
 
 export default AnArtist;

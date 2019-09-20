@@ -21,7 +21,6 @@ function ImageGrid({ getUserImagesArr, images, user }) {
     <>
     <FileUpload id={user._id} type={user.userType}/>
     <div className={styles.div}>
-    
       <div className={styles.images}>
         {imageElement}
       </div>

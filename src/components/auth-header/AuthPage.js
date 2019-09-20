@@ -26,7 +26,7 @@ export default function AuthPage({ userById, currentUser }) {
     if(currentUser.userAuth0Id){
       return<UserHome />;
     }
-    return<UserForm userAuth0Id={idForMe} />;
+    return<UserForm userAuth0Id={idForMe} getUser={userById} />;
   };
   
   const data = dataToLoad();
