@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ImageGrid from '../components/images/ImageGrid';
+import ProfileImageGrid from '../components/images/ProfileImageGrid';
 import { getProfileImages } from '../selectors/allSelectors';
 
 const mapStateToProps = state => ({
@@ -8,4 +8,4 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps
-)(ImageGrid);
+)(ProfileImageGrid);

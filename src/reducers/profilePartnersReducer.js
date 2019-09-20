@@ -1,11 +1,9 @@
 
 const initialState = {
   partners: [
-    { id: 1, name: 'rrrPlace1' },
-    { id: 12, name: 'Plrrrace2' },
-    { id: 153, name: 'Placrrrrre3' },
-    { id: 163, name: 'Place4rrrrr' },
-    { id: 173, name: 'Plarrrrrce5' },
+    { id: 1, name: 'MarkovCo Gallery' },
+    { id: 12, name: 'Basic Space Gallery' },
+    { id: 153, name: 'Dragon Fire Gallery' },
   ]
 };
 

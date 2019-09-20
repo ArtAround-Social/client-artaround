@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createUser } from '../../services/userApi';
 import PropTypes from 'prop-types';
+import styles from './UserForm.css';
 
 function UserForm({ userAuth0Id, getUser }) {
 
@@ -37,17 +38,17 @@ function UserForm({ userAuth0Id, getUser }) {
   };
     
   return(
-    <form onSubmit={handleSubmit}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <select value={userType} onChange={handleTypeChange}>
         <option value="artist">Artist</option>
         <option value="gallery">Gallery</option>
       </select>
       <input placeholder='Name' value={name} onChange={handleNameChange} required={true} />
-      <input placeholder='Gallery Name' value={galleryName} onChange={handleGalleryNameChange} />
       <input placeholder='Location' value={location} onChange={handleLocationChange} required={true} />
       <input placeholder='Phone #' value={phone} onChange={handlePhoneChange} required={true} />
-      <input placeholder='Email' value={email} onChange={handleEmailChange} required={true} />
-      <input placeholder='Rules' value={rules} onChange={handleRulesChange}/>
+      <input placeholder='Email' value={email} onChange={handleEmailChange} required={true} /><br/>
+      <input placeholder='Gallery Name' value={galleryName} onChange={handleGalleryNameChange} width='180px'/>
+      <input placeholder='Main Rules(only for gallery accounts)' value={rules} onChange={handleRulesChange}/>
       <button>Submit</button>
     </form>
   );
