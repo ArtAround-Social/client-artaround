@@ -1,5 +1,7 @@
+const apiUrl = process.env.API_URL;
+
 export const postPartnership = ({ artist, gallery, active }) => {
-  return fetch('https://artaround-test-app.herokuapp.com/api/v1/partnerships', {
+  return fetch(`${apiUrl}/api/v1/partnerships`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json'
@@ -13,7 +15,7 @@ export const postPartnership = ({ artist, gallery, active }) => {
 };
 
 export const getPartnership = () => {
-  return fetch('https://artaround-test-app.herokuapp.com/api/v1/partnerships', {
+  return fetch(`${apiUrl}/api/v1/partnerships`, {
     method: 'GET',
     headers: {
       'Content-type': 'application/json'
@@ -27,7 +29,7 @@ export const getPartnership = () => {
 
 export const getUserPartnerships = (user  = {}) => {
   
-  return fetch(`https://artaround-test-app.herokuapp.com/api/v1/partnerships/user-partners/${user._id}`, {
+  return fetch(`${apiUrl}/api/v1/partnerships/user-partners/${user._id}`, {
     method: 'GET',
     headers: {
       'Content-type': 'application/json'
@@ -40,7 +42,7 @@ export const getUserPartnerships = (user  = {}) => {
 };
 
 export const putPartnership = ({ artist, gallery, active }) => {
-  return fetch('https://artaround-test-app.herokuapp.com/api/v1/partnerships', {
+  return fetch(`${apiUrl}/api/v1/partnerships`, {
     method: 'PUT',
     headers: {
       'Content-type': 'application/json'

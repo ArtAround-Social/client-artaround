@@ -1,4 +1,3 @@
-
 const apiUrl = process.env.API_URL;
 // const herokuURL = 'https://artaround-test-app.herokuapp.com/api/v1/users';
 
@@ -67,7 +66,7 @@ export const userById = ({ userId }) => {
 };
 
 export const allArtists = () => {
-  return fetch('https://artaround-test-app.herokuapp.com/api/v1/users/all-artists', {
+  return fetch(`${apiUrl}/api/v1/users/all-artists`, {
     method: 'GET',
     headers: {
       'Content-type': 'application/json'
@@ -83,7 +82,7 @@ export const allArtists = () => {
 export const userImages = (user  = {}) => {
   console.log(user._id);
   
-  return fetch(`https://artaround-test-app.herokuapp.com/api/v1/artworks/user-with-artwork/${user._id}`, {
+  return fetch(`${apiUrl}/api/v1/artworks/user-with-artwork/${user._id}`, {
     method: 'GET',
     headers: {
       'Content-type': 'application/json'
