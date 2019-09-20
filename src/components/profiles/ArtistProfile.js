@@ -7,17 +7,15 @@ import AuthHeader from '../auth-header/AuthHeader';
 import styles from './Profile.css';
 // import { addUserById } from '../../actions/userActions';
 
-function ArtistProfile({ match: { params }, addUser, user }) {
+function ArtistProfile({ match: { params }, addUser, currentUser, profileUser, addPartnership }) {
   useEffect(() => {
     addUser(params.id);
   }, []);
 
-  console.log(user);
-  // componentDidMount(){
-  //   console.log('PARAMS', this.props.match.params.id);
-  //   addUserById(this.props.match.params.id);
-  // }
-  
+  const clickHandler = () => {
+    addPartnership(currentUser._id, profileUser._id);
+  };
+
   return(
     <div>
       <AuthHeader/>
@@ -29,7 +27,7 @@ function ArtistProfile({ match: { params }, addUser, user }) {
       </div>
       <div className={styles.partners}>
         <ProfilePartnersContainer/>
-        <RequestButton/>
+        <RequestButton handleRequest={clickHandler}/>
       </div>
     </div>
   );
@@ -38,7 +36,9 @@ function ArtistProfile({ match: { params }, addUser, user }) {
 ArtistProfile.propTypes = {
   match: PropTypes.object.isRequired,
   addUser: PropTypes.func.isRequired,
-  user: PropTypes.object.isRequired
+  currentUser: PropTypes.object.isRequired,
+  profileUser: PropTypes.object.isRequired,
+  addPartnership: PropTypes.func.isRequired
 };
 
 export default ArtistProfile;
