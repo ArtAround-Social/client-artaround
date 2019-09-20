@@ -1,6 +1,7 @@
 import React  from 'react';
 import { useAuth0 } from '../../AuthProvider';
 import styles from './AuthHeader.css';
+import { Link } from 'react-router-dom';
 
 export default function AuthHeader() {
   const { isAuthenticated, auth0Client } = useAuth0();
@@ -11,6 +12,7 @@ export default function AuthHeader() {
     <section className={styles.header}>
       {!isAuthenticated && <button onClick={login}>Login</button>}
       {isAuthenticated && <button onClick={logout}>Logout</button>}
+      {isAuthenticated && <Link to='/auth'>Home Page</Link>}
     </section>
   );
 }

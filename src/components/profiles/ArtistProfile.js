@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-// import ProfileImagesContainer from '../../containers/ProfileImagesContainer';
+import ProfileImagesContainer from '../../containers/ProfileImagesContainer';
 import ProfilePartnersContainer from '../../containers/ProfilePartnersContainer';
 import RequestButton from './RequestButton';
 import AuthHeader from '../auth-header/AuthHeader';
@@ -23,7 +23,7 @@ function ArtistProfile({ match: { params }, addUser, user }) {
       <AuthHeader/>
       <h2>artist</h2>
       <div className={styles.images}>
-        {/* <ProfileImagesContainer/> */}
+        <ProfileImagesContainer/>
       </div>
       <div className={styles.info}>
       </div>

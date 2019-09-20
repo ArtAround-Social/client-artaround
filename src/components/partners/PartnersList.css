@@ -12,14 +12,13 @@ ul {
   text-shadow: none
 }
 
-.profile {
-  margin-left: 200px;
-}
+
 
 .item {
   border: solid;
   padding: 3px;
-  border-color: rgba(11, 7, 51, 0.445);
+  height: 25px;
+  border-color: rgba(160, 159, 175, 0.445);
   border-radius: 3px;
   margin-bottom: 4px;
   background-color:  rgb(252, 252, 252);
@@ -37,4 +36,8 @@ a:link, a:visited {
 
 a:hover, a:active {
   background-color:  #080355fa;
+}
+
+.profile {
+  float: right;
 }
