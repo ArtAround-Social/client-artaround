@@ -13,7 +13,7 @@ function ImageGrid({ getUserImagesArr, images, user }) {
   useEffect(() => {
     if(user && user._id) getUserImagesArr(user);
     // if(user && user._id) updateUserImagesArr(user);
-  }, [user]);
+  }, [user, images]);
 
 
 
